@@ -1,0 +1,92 @@
+.programming {
+  padding-top: 5.3em;
+  padding-bottom: 5.3em;
+  text-align: center;
+
+  .title {
+    text-transform: uppercase;
+    font-size: 1.875em;
+    margin-bottom: 2.83em;
+  }
+
+  .feature {
+    display: table;
+    margin: 0 auto 6.25em auto;
+
+    time, .event {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 1em;
+    }
+
+    time {
+      font-weight: 700;
+      font-size: 1.66em;
+    }
+
+    .event {
+      text-align: left;
+
+      .header, .description {
+        font-weight: 600;
+      }
+
+      .header {
+        font-size: 1.125em;
+        margin: 0 0 0.1em 0;
+      }
+
+      .description {
+        font-size: 0.925em;
+        color: #2f2e2e;
+      }
+    }
+  }
+
+  .events-table {
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+
+    .feature {
+      margin: 0;
+      width: 100%;
+
+      time, .event {
+        padding: 0;
+      }
+    }
+
+    .title {
+      display: inline-block;
+      width: 100%;
+      padding-bottom: .5em;
+      font-weight: 700;
+      text-transform: none;
+      border-bottom: solid 1px #ddd;
+      margin: 0;
+    }
+
+    .time, .event {
+      display: inline-block;
+    }
+
+    .time {
+      width: 25%;
+    }
+
+    .event {
+      width: 74%;
+    }
+
+    tr, tbody {
+      display: inline-block;
+      width: 100%;
+
+      td {
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+    }
+  }
+}

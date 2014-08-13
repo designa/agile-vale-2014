@@ -1,0 +1,57 @@
+.main-header {
+  background-color: #f83e3f;
+  text-align: center;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  position: relative;
+
+  .logo {
+    min-width: 100px;
+    max-width: 200px;
+    width: 50%;
+  }
+
+  .main-title {
+    margin-top: .25em;
+    font-size: 4em;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .register-btn {
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: .5em;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.125em;
+    line-height: 3.75em;
+    height: 3.75em;
+    width: 10.5em;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &:hover {
+      color: #f83e3f;
+      background: #fff;
+    }
+  }
+
+  .address {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5.3em;
+    line-height: 5.3em;
+    background-color: #e73535;
+
+    time {
+      color: #fff;
+      font-size: 1.125em;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+}

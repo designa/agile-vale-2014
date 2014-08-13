@@ -1,0 +1,75 @@
+.flip-container {
+  margin-bottom: 1em;
+
+  .front {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 25em;
+    }
+  }
+
+  .back {
+    text-align: left;
+    max-width: 25em;
+    margin: 0 auto;
+
+    .speaker-name {
+      font-size: 1.6em;
+      font-weight: 700;
+      margin: 0 0 0.1em 0;
+    }
+
+    .speaker-role {
+      color: #f83e3f;
+      display: block;
+      font-weight: 600;
+      font-size: 0.925em;
+      margin-bottom: 2em;
+    }
+
+    .speaker-description {
+      font-size: 0.875em;
+      line-height: 1.5em;
+      font-weight: 500;
+    }
+  }
+}
+
+
+@media(min-width: 979px) {
+  .flip-container {
+    perspective: 1000;
+  }
+
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+    height: 100%;
+  }
+
+  .front {
+    z-index: 2;
+  }
+
+  .back {
+    color: #fff;
+    background: #333;
+    padding: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+  }
+}

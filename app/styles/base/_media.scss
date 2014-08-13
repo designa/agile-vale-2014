@@ -1,0 +1,65 @@
+@media(min-width: 1200px) {
+  html, body {
+    font-size: 16px;
+
+    .row {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+}
+
+@media(min-width: 979px) {
+  html, body {
+    .main-header {
+      min-height: 36em;
+    }
+
+    .programming .events-table {
+      float: left;
+      width: 40%;
+
+      &:nth-child(2n+2) {
+        margin-left: 10%;
+      }
+    }
+  }
+}
+
+@media(min-width: 979px) and (max-width: 1199px) {
+  html, body {
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 978px) {
+  html, body {
+    .programming {
+      .events-table {
+        .time, .event, tr td {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 767px) and (max-width: 978px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 490px) and (max-width: 766px) {
+  html, body {
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 489px) {
+  html, body {
+    font-size: 12px;
+  }
+}
