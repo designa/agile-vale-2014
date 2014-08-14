@@ -11,17 +11,11 @@
 
   .events-table {
     text-align: left;
-    width: 100%;
-    display: inline-block;
+    border-collapse: separate;
+    border-spacing: 40px;
 
-    .feature {
-      display: table;
-      width: 100%;
-    }
 
     .title {
-      display: inline-block;
-      width: 100%;
       padding-bottom: .5em;
       font-weight: 700;
       text-transform: none;
@@ -29,13 +23,8 @@
       margin: 0;
     }
 
-    .time, .event {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
     .time {
-      width: 25%;
+      width: 8em;
 
       time {
         font-weight: 700;
@@ -43,31 +32,27 @@
       }
     }
 
-    .event {
-      width: 75%;
-
-      .header, .description {
-        font-weight: 600;
-      }
-
-      .header {
-        margin: 0;
-        font-size: 1.125em;
-        margin: 0 0 0.1em 0;
-      }
-
-      .description {
-        font-size: 0.925em;
-        color: #2f2e2e;
-      }
+    .header, .description {
+      font-weight: 600;
     }
 
-    tr, tbody {
-      display: inline-block;
-      width: 100%;
+    .header {
+      margin: 0;
+      font-size: 1.125em;
+      margin: 0 0 0.1em 0;
+    }
 
+    .description {
+      font-size: 0.925em;
+      color: #2f2e2e;
+    }
+
+    tr {
       td {
         padding: 2em 20px;
+
+        &:nth-child(1n+3) {
+        }
       }
     }
   }
