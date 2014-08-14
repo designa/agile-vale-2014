@@ -1,0 +1,65 @@
+.local {
+  text-align: center;
+  position: relative;
+
+  .bg-image {
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 99%;
+    background-image: url("/images/foto-hotel.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  .faro-hotel {
+    margin-top: -2.5em;
+    margin-bottom: 2.5em;
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .event-address {
+    p {
+      font-style: normal;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.125em;
+
+      span {
+        margin: 0.857em 0;
+        font-size: 2.2em;
+        display: block;
+      }
+    }
+  }
+
+  .more-info {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.925em;
+    display: block;
+    margin-bottom: 2.5em;
+    font-weight: 500;
+  }
+}

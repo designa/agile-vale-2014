@@ -17,7 +17,7 @@
     }
 
     .programming .events-table {
-      float: left;
+      display: inline-block;
       width: 40%;
 
       &:nth-child(2n+2) {
@@ -35,14 +35,6 @@
 
 @media(max-width: 978px) {
   html, body {
-    .programming {
-      .events-table {
-        .time, .event, tr td {
-          display: block;
-          width: 100%;
-        }
-      }
-    }
   }
 }
 

@@ -1,6 +1,6 @@
 .programming {
   padding-top: 5.3em;
-  padding-bottom: 5.3em;
+  padding-bottom: 8em;
   text-align: center;
 
   .title {
@@ -9,52 +9,14 @@
     margin-bottom: 2.83em;
   }
 
-  .feature {
-    display: table;
-    margin: 0 auto 6.25em auto;
-
-    time, .event {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 0 1em;
-    }
-
-    time {
-      font-weight: 700;
-      font-size: 1.66em;
-    }
-
-    .event {
-      text-align: left;
-
-      .header, .description {
-        font-weight: 600;
-      }
-
-      .header {
-        font-size: 1.125em;
-        margin: 0 0 0.1em 0;
-      }
-
-      .description {
-        font-size: 0.925em;
-        color: #2f2e2e;
-      }
-    }
-  }
-
   .events-table {
     text-align: left;
     width: 100%;
     display: inline-block;
 
     .feature {
-      margin: 0;
+      display: table;
       width: 100%;
-
-      time, .event {
-        padding: 0;
-      }
     }
 
     .title {
@@ -68,15 +30,36 @@
     }
 
     .time, .event {
-      display: inline-block;
+      display: table-cell;
+      vertical-align: middle;
     }
 
     .time {
       width: 25%;
+
+      time {
+        font-weight: 700;
+        font-size: 1.66em;
+      }
     }
 
     .event {
-      width: 74%;
+      width: 75%;
+
+      .header, .description {
+        font-weight: 600;
+      }
+
+      .header {
+        margin: 0;
+        font-size: 1.125em;
+        margin: 0 0 0.1em 0;
+      }
+
+      .description {
+        font-size: 0.925em;
+        color: #2f2e2e;
+      }
     }
 
     tr, tbody {
@@ -84,8 +67,7 @@
       width: 100%;
 
       td {
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding: 2em 20px;
       }
     }
   }
