@@ -13,7 +13,7 @@
     text-align: left;
     border-collapse: separate;
     border-spacing: 40px;
-
+    width: 100%;
 
     .title {
       padding-bottom: .5em;
@@ -49,6 +49,7 @@
 
     tr {
       td {
+        min-width: 100px;
         padding: 2em 20px;
 
         &:nth-child(1n+3) {

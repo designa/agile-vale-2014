@@ -35,6 +35,20 @@
   }
 }
 
+@media(max-width: 766px) {
+  html, body {
+    .table-responsive {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      width: 100%;
+      margin: 1em 0;
+      table {
+        margin: 0;
+      }
+    }
+  }
+}
+
 @media(min-width: 490px) and (max-width: 766px) {
   html, body {
     font-size: 13px;
