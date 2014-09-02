@@ -1,0 +1,1 @@
+ rsync -avz -e ssh dist/ eventos:~/agilevale2014
