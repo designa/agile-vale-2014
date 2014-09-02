@@ -38,7 +38,7 @@
 
         <section class="photos"></section>
 
-        <section class="speakers">
+        <section class="speakers" ng-hide="conference.release">
           <article class="row">
             <h1 class="title">Presenças ilustres</h1>
 
@@ -59,7 +59,7 @@
           </article>
         </section>
 
-        <section class="programming">
+        <section class="programming" ng-hide="conference.release">
           <article class="row">
             <h1 class="title">Programação do evento</h1>
 
@@ -87,7 +87,7 @@
           </article>
         </section>
 
-        <section class="local">
+        <section class="local" ng-hide="conference.release">
           <div class="bg-image"></div>
 
           <article class="row">
@@ -101,7 +101,7 @@
           </article>
         </section>
 
-        <section class="sponsors">
+        <section class="sponsors" ng-hide="conference.release">
           <article class="row">
             <h1 class="title sponsor-title">Patrocinadores</h1>
 
