@@ -1,1 +1,1 @@
- rsync -avz -e ssh dist/ eventos:~/agilevale2014
+grunt build && rsync -avz -e ssh dist/ eventos:~/agilevale2014
