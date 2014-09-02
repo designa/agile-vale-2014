@@ -1,171 +1,68 @@
 <!doctype html>
 <html ng-app="agileVale" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-controller="ConferenceCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Add your site or application content here -->
+      <!-- Add your site or application content here -->
 
-    <div class="main">
-      <header class="main-header">
-        <article class="row">
-          <img src="images/logo.svg" alt="Agile Vale 2014" class="logo">
+      <div class="main">
+        <header class="main-header">
+          <article class="row">
+            <img src="images/logo.svg" alt="Agile Vale 2014" class="logo">
 
-          <h1 class="main-title">Agile Vale 2014</h1>
+            <h1 class="main-title">{{conference.name}}</h1>
 
-          <a href="#" class="register-btn">Inscreva-se</a>
-        </article>
+            <a ng-href="{{conference.eventick}}" class="register-btn">Inscreva-se</a>
+          </article>
 
-        <address class="address">
-          <time>26 Set, Faro Hotel - São José dos Campos</time>
-        </address>
-      </header>
+          <address class="address">
+            <time>{{conference.date.formated | date:'dd MMM'}}, {{conference.place}} - {{conference.city}}</time>
+          </address>
+        </header>
 
-      <section class="photos"></section>
+        <section class="photos"></section>
 
-      <section class="speakers">
-        <article class="row">
-          <h1 class="title">Presenças ilustres</h1>
+        <section class="speakers">
+          <article class="row">
+            <h1 class="title">Presenças ilustres</h1>
 
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante2.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
+            <div class="col-md-4 flip-container" ng-repeat="speaker in conference.speakers">
+              <div class="flipper">
+                <div class="front">
+                  <img ng-src="{{speaker.photos.medium}}" alt="Palestrante">
+                </div>
+                <div class="back">
+                  <h1 class="speaker-name">{{speaker.name}}</h1>
+                  <span class="speaker-role">{{speaker.title}}</span>
+                  <p class="speaker-description">{{speaker.description}}</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante3.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante4.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
+          </article>
+        </section>
 
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante5.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
+        <section class="programming">
+          <article class="row">
+            <h1 class="title">Programação do evento</h1>
 
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante6-10.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante6.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante7.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 flip-container">
-            <div class="flipper">
-              <div class="front">
-                <img src="images/palestrante8.jpg" alt="Palestrante">
-              </div>
-              <div class="back">
-                <h1 class="speaker-name">Dave Evans</h1>
-                <span class="speaker-role">Google Chief Strategy</span>
-                <p class="speaker-description">Empreendedor digital e knowledge worker, fundador da Teamware e da Germinadora, ajudou na transformação de mais de 120 equipes em empresas como Ericsson, Instituto Nokia, Globo.com, IG, Positivo, entre outras.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="programming">
-        <article class="row">
-          <h1 class="title">Programação do evento</h1>
-
-          <div class="table-responsive">
             <table class="events-table">
               <tr>
                 <td></td>
@@ -173,16 +70,8 @@
                 <td class="title">Trilha Técnica</td>
               </tr>
 
-              <tr class="feature">
-                <td class="time"><time>9h</time></td>
-                <td class="event">
-                  <h2 class="header">Keynote de abertura</h2>
-                  <span class="description">Um resumão do dia</span>
-                </td>
-              </tr>
-
-              <tr class="feature">
-                <td class="time"><time>10h</time></td>
+              <tr class="feature" ng-repeat="schedule in conference.schedules">
+                <td class="time"><time>{{schedule.time | date:'shortTime'}}</time></td>
                 <td class="event">
                   <h2 class="header">Keynote de abertura</h2>
                   <span class="description">Um resumão do dia</span>
@@ -193,113 +82,58 @@
                 </td>
               </tr>
 
-              <tr class="feature">
-                <td class="time"><time>11h</time></td>
-                <td class="event">
-                  <h2 class="header">Palestrante 1</h2>
-                  <span class="description">Tema da palestra</span>
-                </td>
-                <td class="event">
-                  <h2 class="header">Keynote de abertura</h2>
-                  <span class="description">Um resumão do dia</span>
-                </td>
-              </tr>
 
-              <tr class="feature">
-                <td class="time"><time>11:30h</time></td>
-                <td class="event">
-                  <h2 class="header">Palestrante 2</h2>
-                  <span class="description">Tema da palestra</span>
-                </td>
-                <td class="event">
-                  <h2 class="header">Keynote de abertura</h2>
-                  <span class="description">Um resumão do dia</span>
-                </td>
-              </tr>
             </table>
-          </div>
-        </article>
-      </section>
+          </article>
+        </section>
 
-      <section class="local">
-        <div class="bg-image"></div>
+        <section class="local">
+          <div class="bg-image"></div>
 
-        <article class="row">
-          <img src="images/foto-hotel.jpg" alt="Faro Hotel" class="faro-hotel">
+          <article class="row">
+            <img src="images/foto-hotel.jpg" alt="Faro Hotel" class="faro-hotel">
 
-          <address class="event-address">
-            <p>O evento vai ser realizado no <span>Faro Hotel em São José dos Campos</span></p>
-          </address>
+            <address class="event-address">
+              <p>O evento vai ser realizado no <span>{{conference.place}} em {{conference.city}} </span></p>
+            </address>
 
-          <a href="#" class="more-info">Saiba mais</a>
-        </article>
-      </section>
+            <a href="#" class="more-info">Saiba mais</a>
+          </article>
+        </section>
 
-      <section class="sponsors">
-        <article class="row">
-          <h1 class="title sponsor-title">Patrocinadores</h1>
+        <section class="sponsors">
+          <article class="row">
+            <h1 class="title sponsor-title">Patrocinadores</h1>
 
-          <div class="col-md-12">
-            <div class="sponsor silver">
-              <h2 class="category">Prata</h2>
-
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
+            <div ng-repeat="sponsorship in conference.sponsorships">
+              <div class="col-md-4">
+                <h2 class="title support-title">{{sponsorship.name}}</h2>
+                <div class="sponsor" ng-repeat="sponsor in sponsorship.sponsors">
+                  <img ng-src="{{sponsor.logo.thumb}}" alt="{{sponsor.name}}" class="sponsor-logo">
+                </div>
+              </div>
             </div>
 
-            <div class="sponsor bronze">
-              <h2 class="category">Bronze</h2>
+          </article>
+        </section>
 
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-          </div>
+        <footer class="main-footer">
+          <p class="copyright">© Copyright 2014 - todos os direitos reservados</p>
+        </footer>
+      </div>
 
-          <h2 class="title support-title">Apoio</h2>
-
-          <div class="col-md-12">
-            <div class="sponsor">
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-
-            <div class="sponsor">
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-
-            <div class="sponsor">
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-
-            <div class="sponsor">
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-
-            <div class="sponsor">
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-
-            <div class="sponsor">
-              <img src="images/cecompi.jpg" alt="CECOMPI" class="sponsor-logo">
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <footer class="main-footer">
-        <p class="copyright">© Copyright 2014 - todos os direitos reservados</p>
-      </footer>
-    </div>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-    </script>
+     </script>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -307,30 +141,16 @@
     <!-- endbuild -->
 
     <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/designa-events.js"></script>
+    <script src="scripts/controllers/conference.js"></script>
+    <!-- endbuild -->
+  </body>
+  </html>

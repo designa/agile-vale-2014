@@ -8,9 +8,11 @@
  *
  * Main module of the application.
  */
-angular
-  .module('agileVale', [
-    'ngResource',
-    'ngRoute',
-    'ngSanitize'
-  ]);
+ angular.module('agileVale', [
+  'ngResource',
+  'ngSanitize',
+  'ngDesignaEvents'
+  ])
+ .config(function(DesignaEventsProvider){
+  DesignaEventsProvider.setEventName('agilevale');
+})
