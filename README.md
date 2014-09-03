@@ -11,10 +11,10 @@ First of all, you need to clone it ;)
 git clone git@github.com:designa/agile-vale-2014.git
 ```
 
-after that, just run: 
+after that, just run:
 
 ```
-npm instal
+npm install
 `````
 
 and...

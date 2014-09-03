@@ -40,7 +40,7 @@
 
         <section class="speakers" ng-hide="conference.release">
           <article class="row">
-            <h1 class="title">Presenças ilustres</h1>
+            <h1 class="title">Palestrantes</h1>
 
             <div class="col-md-4 flip-container" ng-repeat="speaker in conference.speakers">
               <div class="flipper">
@@ -109,7 +109,7 @@
               <div class="col-md-4">
                 <h2 class="title support-title">{{sponsorship.name}}</h2>
                 <div class="sponsor" ng-repeat="sponsor in sponsorship.sponsors">
-                  <img ng-src="{{sponsor.logo.thumb}}" alt="{{sponsor.name}}" class="sponsor-logo">
+                  <a ng-href="{{sponsor.website}}" target="_blannk"><img ng-src="{{sponsor.logo.thumb}}" alt="{{sponsor.name}}" class="sponsor-logo"></a>
                 </div>
               </div>
             </div>
