@@ -1,6 +1,6 @@
 .programming {
   padding-top: 5.3em;
-  padding-bottom: 8em;
+  padding-bottom: 1em;
   text-align: center;
 
   .title {
@@ -31,20 +31,28 @@
       }
     }
 
-    .header, .description {
+    .header {
       font-weight: 600;
     }
 
     .header {
       margin: 0;
       font-size: 1.125em;
-      margin: 0 0 1em 0;
+      margin: 0;
+      .speaker{
+        width: 100%;
+        display: block;
+        font-size: 16px;
+        color: #000000;
+      }
+      .talk-title{
+        font-weight: bold;
+      }
     }
-
     .description {
-      font-size: 0.925em;
-      color: #929292;
-    }
+        font-size: 0.925em;
+        color: #cfcfcf;
+      }
 
     .room {
       padding: 0px 6px;
@@ -55,6 +63,7 @@
       color: #ffffff;
       font-size: 0.8em;
       margin-bottom: 10px;
+      margin-left: 10px;
     }
 
     tr {
@@ -72,7 +81,10 @@
 
         .schedule-list li{
           list-style: none;
-          margin-bottom: 20px;
+          margin-bottom: 50px;
+          &:last-child{
+            margin-bottom: 0px;
+          }
         }
       }
       &.feature:nth-child(odd){
