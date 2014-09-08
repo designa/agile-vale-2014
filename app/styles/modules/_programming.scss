@@ -3,6 +3,10 @@
   padding-bottom: 1em;
   text-align: center;
 
+  h1 {
+    margin-bottom: 3em;
+  }
+
   .title {
     text-transform: uppercase;
     font-size: 1.875em;
@@ -24,6 +28,7 @@
 
     .time {
       width: 8em;
+      vertical-align: top;
 
       time {
         font-weight: 700;
