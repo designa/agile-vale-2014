@@ -72,9 +72,9 @@
                 <td class="time">
                   <time>{{timeOf(schedule)}}</time>
                 </td>
-                <td class="event" ng-repeat="talks in schedule ">
+                <td class="event" ng-repeat="talks in schedule">
                 <ul class="schedule-list">
-                    <li ng-repeat="talk in talks">
+                    <li ng-repeat="talk in talks | orderBy:'room'">
                       <h2 class="header">
                         <span class="talk-title">{{talk.title}}</span>
                         <span class="room" ng-show="{{talk.room}}"> {{talk.room}} </span>
