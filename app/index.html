@@ -50,7 +50,7 @@
                 <div class="back">
                   <h1 class="speaker-name">{{speaker.name}}</h1>
                   <span class="speaker-role">{{speaker.title}}</span>
-                  <p class="speaker-description">{{speaker.description}}</p>
+                  <p class="speaker-description">{{speaker.bio}}</p>
                 </div>
               </div>
             </div>
@@ -60,34 +60,43 @@
         </section>
 
         <section class="programming" ng-hide="conference.release">
-          <article class="row">
-            <h1 class="title">Programação do evento</h1>
 
-            <table class="events-table">
+          <h1> Programação</h1>
+
+          <article class="row" ng-repeat="days in conference.schedules">
+
+            <table class="events-table" ng-repeat="(day,schedules) in days" cellpadding="0" cellspacing="0">
+
               <tr>
-                <td></td>
-                <td class="title">Trilha Gestão</td>
-                <td class="title">Trilha Técnica</td>
+                <th colspan="2" class="title"> {{day}}</th>
               </tr>
 
-              <tr class="feature" ng-repeat="schedule in conference.schedules">
-                <td class="time"><time>{{schedule.time | date:'shortTime'}}</time></td>
-                <td class="event">
-                  <h2 class="header">Keynote de abertura</h2>
-                  <span class="description">Um resumão do dia</span>
+              <tr class="feature" ng-repeat="schedule in schedules">
+
+                <td class="time">
+                  <time>{{timeOf(schedule)}}</time>
                 </td>
-                <td class="event">
-                  <h2 class="header">Keynote de abertura</h2>
-                  <span class="description">Um resumão do dia</span>
+                <td class="event" ng-repeat="talks in schedule ">
+                <ul class="schedule-list">
+                    <li ng-repeat="talk in talks">
+                      <h2 class="header">
+                        {{talk.title}} <br>
+                        <span class="room"> {{talk.room}} </span>
+                      </h2>
+                      <span class="description">{{talk.description}}</span>
+                    </li>
+                  </ul>
                 </td>
               </tr>
-
 
             </table>
+
           </article>
+
+
         </section>
 
-        <section class="local" ng-hide="conference.release">
+        <section class="local" ng-hide="true">
           <div class="bg-image"></div>
 
           <article class="row">
@@ -123,7 +132,7 @@
       </div>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-      <script>
+     <!--  <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -131,7 +140,7 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-     </script>
+     </script> -->
 
      <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>

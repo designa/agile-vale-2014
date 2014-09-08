@@ -12,7 +12,6 @@
   .events-table {
     text-align: left;
     border-collapse: separate;
-    border-spacing: 40px;
     width: 100%;
 
     .title {
@@ -39,21 +38,45 @@
     .header {
       margin: 0;
       font-size: 1.125em;
-      margin: 0 0 0.1em 0;
+      margin: 0 0 1em 0;
     }
 
     .description {
       font-size: 0.925em;
-      color: #2f2e2e;
+      color: #929292;
+    }
+
+    .room {
+      padding: 0px 6px;
+      border: 2px solid #CF5F5F;
+      width: auto;
+      border-radius: 3px;
+      background: #cf5f5f;
+      color: #ffffff;
+      font-size: 0.8em;
+      margin-bottom: 10px;
     }
 
     tr {
       td {
         min-width: 100px;
         padding: 2em 20px;
+        border-bottom: 1px solid #efefef;
 
         &:nth-child(1n+3) {
         }
+
+        &:nth-last-child(-n+2) {
+          border-bottom: none;
+        }
+
+        .schedule-list li{
+          list-style: none;
+          margin-bottom: 20px;
+        }
+      }
+      &.feature:nth-child(odd){
+        background: #fbfbfb;
       }
     }
   }

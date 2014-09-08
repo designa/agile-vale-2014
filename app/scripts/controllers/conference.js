@@ -3,7 +3,10 @@ angular.module('agileVale')
       
       DesignaEvents.fetch().then(function(response){
         $scope.conference = response.data;
-        console.log($scope.conference);
       });
+
+      $scope.timeOf = function(schedule){
+        return Object.keys(schedule)[0];
+      }
 
   }]);
