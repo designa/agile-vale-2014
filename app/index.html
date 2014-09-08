@@ -80,8 +80,11 @@
                 <ul class="schedule-list">
                     <li ng-repeat="talk in talks">
                       <h2 class="header">
-                        {{talk.title}} <br>
-                        <span class="room"> {{talk.room}} </span>
+                        <span class="talk-title">{{talk.title}}</span> 
+                        <span class="room" ng-show="{{talk.room}}"> {{talk.room}} </span>
+                        <span class="speaker" ng-repeat="speaker in talk.speakers">
+                          {{speaker.name }}, {{speaker.title}}
+                        </span>
                       </h2>
                       <span class="description">{{talk.description}}</span>
                     </li>
@@ -115,7 +118,7 @@
             <h1 class="title sponsor-title">Patrocinadores</h1>
 
             <div ng-repeat="sponsorship in conference.sponsorships">
-              <div class="col-md-4">
+              <div class="col-md-4" ng-show="sponsorship.sponsors">
                 <h2 class="title support-title">{{sponsorship.name}}</h2>
                 <div class="sponsor" ng-repeat="sponsor in sponsorship.sponsors">
                   <a ng-href="{{sponsor.website}}" target="_blannk"><img ng-src="{{sponsor.logo.thumb}}" alt="{{sponsor.name}}" class="sponsor-logo"></a>
