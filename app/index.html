@@ -40,7 +40,7 @@
 
         <section class="speakers" ng-hide="conference.release">
           <article class="row">
-            <h1 class="title">Palestrantes</h1>
+            <h1 class="title">PALESTRANTES</h1>
 
             <div class="col-md-4 flip-container" ng-repeat="speaker in conference.speakers">
               <div class="flipper">
@@ -61,15 +61,11 @@
 
         <section class="programming" ng-hide="conference.release">
 
-          <h1> Programação</h1>
+          <h1>PROGRAMAÇÃO</h1>
 
           <article class="row" ng-repeat="days in conference.schedules">
 
             <table class="events-table" ng-repeat="(day,schedules) in days" cellpadding="0" cellspacing="0">
-
-              <tr>
-                <th colspan="2" class="title"> {{day}}</th>
-              </tr>
 
               <tr class="feature" ng-repeat="schedule in schedules">
 
@@ -80,7 +76,7 @@
                 <ul class="schedule-list">
                     <li ng-repeat="talk in talks">
                       <h2 class="header">
-                        <span class="talk-title">{{talk.title}}</span> 
+                        <span class="talk-title">{{talk.title}}</span>
                         <span class="room" ng-show="{{talk.room}}"> {{talk.room}} </span>
                         <span class="speaker" ng-repeat="speaker in talk.speakers">
                           {{speaker.name }}, {{speaker.title}}
@@ -115,7 +111,7 @@
 
         <section class="sponsors" ng-hide="conference.release">
           <article class="row">
-            <h1 class="title sponsor-title">Patrocinadores</h1>
+            <h1>PATROCINADORES</h1>
 
             <div ng-repeat="sponsorship in conference.sponsorships">
               <div class="col-md-4" ng-show="sponsorship.sponsors">
