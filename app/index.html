@@ -5,6 +5,20 @@
   <title>{{conference.name}} {{conference.slogan}}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
+  <meta property="og:locale" content="pt_BR">
+
+  <meta property="og:url" content="http://www.agilevale.com.br">
+
+  <meta property="og:title" content="Agile Vale - Agilidade e evolução">
+  <meta property="og:site_name" content="Agile Vale">
+
+  <meta property="og:description" content="O Agile Vale é uma das maiores conferências sobre metodologias ágeis e engenharia de software do Brasil.">
+
+  <meta property="og:image" content="http://www.agilevale.com.br/images/og-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="600"> 
+  <meta property="og:type" content="website">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
@@ -73,7 +87,7 @@
                   <time>{{timeOf(schedule)}}</time>
                 </td>
                 <td class="event" ng-repeat="talks in schedule">
-                <ul class="schedule-list">
+                  <ul class="schedule-list">
                     <li ng-repeat="talk in talks | orderBy:'room'">
                       <h2 class="header">
                         <span class="talk-title">{{talk.title}}</span>
